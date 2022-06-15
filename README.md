@@ -6,15 +6,27 @@ As the software matures, it becomes much harder to focus most engineering on the
 
 # Solution
 
-To deal with the ever increasing complexity of the application and infrastructure architecture, we started adopting dapr. As we where already using Kubernetes (Azure Kubernetes Service) and deploy our application with Helm charts, the side car architecture of dapr was an easy fit for us. At first we started utilizing the pub/sub component and over time we gradually started using other components as well. Currently we are using pub/sub, secrets and secure service to service communication and are planning on using the state component and policy feature in the near future.
+To deal with the ever increasing complexity of the application and infrastructure architecture, we started adopting dapr. Dapr takes on many of the responsibilities of interacting with infrastructure and simplifies inter application processes. As we where already using Kubernetes (Azure Kubernetes Service) and deploy our application with Helm charts, the side car architecture of dapr was an easy fit for us. At first we started utilizing the pub/sub component and over time we gradually started using other components as well. Currently we are using pub/sub, secrets, secure service to service communication and are planning on using the state component and policy feature in the near future.
 
 # Impact
 
-By adopting dapr, we where able to remove several software packages and a great deal of code from all of our microservice. This greatly reduces the complexity and amount of required infrastructure related code, allowing us to have more focus on the business features.
+By adopting dapr, we where able to remove several software packages and a great deal of code from all of our microservice. Instead we could simply adopt the simple dapr interfaces from their dotnet sdk and thereby offload dealing with infrastructure and async inter process communication to the dapr runtime. This greatly reduces the complexity and amount of required infrastructure related code, allowing us to have more focus on the business features.
+
+# Vidara
+
+
+
+## Vidara Application architecture
+
+## Vidara Infrastructure
+
+The Vidara infrastructure is running on Azure Kubernetes Service and interfaces with a number of Azure and MongoDb resources. Besides application specific needs, there are also resources involved with manageability and security requirements. To manage all this, Wortell uses GitHub Workflows together with Pulumi for infrastructure lifecycle management. Managing the environment is strictly following processes where permissions are acquired only when needed and for example, private connectivity is established.
+
+![vidara-infra](images/vidara-infra.png)
 
 # Local Development made easy
 
-Local development was simplified as well. We switched from running a local kubernetes cluster to using project Tye together with dapr. Doing this, we can easily use dapr component configurations (yaml files) reflecting local target systems without the need to reflect this in code anymore. For example, we used to have code paths that dealt with Azure Service Bus for dtap and RabbitMQ for local development, switching desired targets by supplying application configuration at startup. With dapr, we still target Azure Service Bus for dtap and we switched to redis for local development. The application code however isn't aware of any of this. Configuration and interfacing with these system is fully external to the application.
+Local development was greatly simplified. We switched from running a local Kubernetes cluster to using project Tye together with dapr. Doing this, we can easily use dapr component configurations (yaml files) reflecting local target systems without the need to reflect this in code anymore. For example, we used to have code paths that dealt with Azure Service Bus for dtap and RabbitMQ for local development, switching desired targets by supplying application configuration at startup. With dapr, we still target Azure Service Bus for dtap and we switched to redis for local development. The application code however isn't aware of any of this. Configuration and interfacing with these system is fully external to the application.
 
 # Reducing application interfacing with infrastructure
 
