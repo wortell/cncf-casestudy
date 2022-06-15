@@ -31,7 +31,7 @@ Service to service communication was next. Using [service to service invocation]
 
 ![dapr-service-invocation](images/dapr-service-invocation-overview.png)
 
-With netheyr versions of dapr, [Azure Managed Identities became supported](https://docs.dapr.io/developing-applications/integrations/azure/authenticating-azure/#using-managed-service-identities) to have dapr components interact with Azure components without the need to have configured secrets. they started using AKS Managed Pod Identity together to provide dapr with the required managed identity access and since then, they don't have any secrets in their application configuration / helm chart anymore.
+With newer versions of dapr, [Azure Managed Identities became supported](https://docs.dapr.io/developing-applications/integrations/azure/authenticating-azure/#using-managed-service-identities) to have dapr components interact with Azure components without the need to have configured secrets. they started using AKS Managed Pod Identity together to provide dapr with the required managed identity access and since then, they don't have any secrets in their application configuration / helm chart anymore.
 
 Most recently they adopted the dapr secret store configuration provider. This allows dapr to pre-fetch application specific secrets from any secrets provider (in their case, Azure KeyVault) and inject them into the application configuration for use. Remaining application secrets are now provided at startup removing the need to have any secrets in local application settings or configuration files.
 
