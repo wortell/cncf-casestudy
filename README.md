@@ -1,9 +1,9 @@
 # Challenge
 
 
-[Wortell](https://www.wortell.nl/en) is the leading Microsoft partner operating its services in the Netherlands, Belgium and Luxembtheirg. Wortell provides a cloud-native [Managed Detect and Response (MDR)](https://www.wortell.nl/en/products/managed-detection-and-response-en) service to secure its clients based on Microsoft Sentinel and Microsoft Defender 365 operating 24/7/365 by a team of dedicated security professionals. 
+[Wortell](https://www.wortell.nl/en) is the leading Microsoft partner operating its services in the Netherlands, Belgium and Luxembourg. Wortell provides a cloud-native [Managed Detect and Response (MDR)](https://www.wortell.nl/en/products/managed-detection-and-response-en) service to secure its clients based on Microsoft Sentinel and Microsoft Defender 365 operating 24/7/365 by a team of dedicated security professionals. 
 
-The service is facilitated by a build for purpose home grown software solution running on dotnet, called **Vidara**, which handles key apsects of connecting multiple customers, executing MDR and SOC processes, response automation, and more. The software solution exists of many microservices, runs on Kubernetes, interacts with cloud restheirces and is continuously expanded.
+The service is facilitated by a build for purpose home grown software solution running on dotnet, called **Vidara**, which handles key apsects of connecting multiple customers, executing MDR and SOC processes, response automation, and more. The software solution exists of many microservices, runs on Kubernetes, interacts with cloud resources and is continuously expanded.
 
 As the software matures, it becomes exponentially more difficult to simply focus the engineering effort on the business goals as the infrastructure and application architecture evolve into a more and more complex system which is tightly integrated into the software stack. Evolving the software required more and more specialized expertise and time from the developers, impacting the velocity of the business development process.
 
