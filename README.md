@@ -1,3 +1,5 @@
+![Wortell Logo](images/wortell-logo.png)
+
 # Challenge
 
 [Wortell](https://www.wortell.nl/en) is a leading Microsoft partner operating its services in the Netherlands, Belgium and Luxembourg. Wortell provides a cloud-native [Managed Detect and Response (MDR)](https://www.wortell.nl/en/products/managed-detection-and-response-en) service to secure its clients based on Microsoft Sentinel and Microsoft Defender 365, operating 24/7/365 by a team of dedicated security professionals.
@@ -40,7 +42,8 @@ The Vidara infrastructure is running on Azure Kubernetes Service and interfaces 
 
 ## Local Development made easy
 
-By using Dapr, local development was greatly simplified for Wortell developers. They switched from running a local Kubernetes cluster to using [Microsoft project Tye](https://devblogs.microsoft.com/dotnet/introducing-project-tye/) together with Dapr. Using Tye, they can easily use Dapr component configurations (yaml files) with locally deployed system software without having to hard code. For example, they used to have code paths that dealt with Azure Service Bus for dtap and RabbitMQ for local development, switching desired targets by supplying application configuration at startup. Now with Dapr, they still target Azure Service Bus for dtap, switching to Redis Dapr components for local development, and the application code  isn't aware of any of this. Using Dapr, configurating and interfacing with these systems is fully external to the application and makes the transistion from local development to the cloud seemless. 
+By using Dapr, local development was greatly simplified for Wortell developers. They switched from running a local Kubernetes cluster to using [Microsoft project Tye](https://devblogs.microsoft.com/dotnet/introducing-project-tye/) together with Dapr. Using Tye, they can easily use Dapr component configurations (yaml files) with locally deployed system software without having to hard code. For example, they used to have code paths that dealt with Azure Service Bus for dtap and RabbitMQ for local development, switching desired targets by supplying application configuration at startup. Now with Dapr, they still target Azure Service Bus for dtap, switching to Redis Dapr components for local development, and the application code  isn't aware of any of this. Using Dapr, configurating and interfacing with these systems is fully external to the application and makes the transition from local development to the cloud seamless.
 
 ## Business benefits
+
 Using Vidara, built with Microsoft Azure & Dapr, as the backend for their security operations, Wortell has a robust and scalable Managed Detection & Response (MDR) platform that together with Microsoft Sentinel and Microsoft Defender 365 can investigate and respond to cyber threats. With this solution, Wortell needs less people on staff, is quick to respond, and has the means to deliver innovative solutions like its HoneyNetwork (tm) for tailored customer threat intelligence.
