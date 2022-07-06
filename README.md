@@ -4,9 +4,9 @@
 
 [Wortell](https://www.wortell.nl/en) is a leading Microsoft partner operating its services in the Netherlands, Belgium and Luxembourg. Wortell provides a cloud-native [Managed Detect and Response (MDR)](https://www.wortell.nl/en/products/managed-detection-and-response-en) service to secure its clients based on Microsoft Sentinel and Microsoft Defender 365, operating 24/7/365 by a team of dedicated security professionals.
 
-The service is facilitated by a built for purpose, homegrown software solution running on .NET, called **Vidara**, which handles key aspects of connecting to multiple customers, executing MDR and SOC processes, response automation, and more. The software solution consists of many microservices, runs on Kubernetes, interacts with cloud resources and is continuously expanding with new capabilities.
+The service is facilitated by a built for purpose, homegrown software solution running on .NET, called **Vidara**, which handles key aspects of connecting to multiple customers, executing MDR and Security Operation Center (SOC) processes, response automation, and more. The software solution consists of many microservices, runs on Kubernetes, interacts with cloud resources and is continuously expanding with new capabilities.
 
-As the software matured, it became exponentially more difficult to focus the engineering effort on the business goals, as the infrastructure and application architecture transformed into an ever more complex system. Evolving the software required more and more specialized expertise and time from the developers, impacting the overall velocity of the team.
+As the software matured, it became exponentially more difficult to focus the engineering effort on the business goals, as the infrastructure and application architecture transformed into an ever more complex system. Evolving the software required more and more specialized infrastructure and integration expertise and time from the developers, impacting the overall velocity of the team.
 
 # Solution
 
